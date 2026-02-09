@@ -9,7 +9,8 @@ form.addEventListener("submit", (event) => {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
 
-  if (emailValue === "") {
+  // виправлено зауваження - дадано перевірку чи введено пароль
+  if (emailValue === "" || passwordValue === "") {
     alert("All form fields must be filled in");
   } else {
     const data = {
